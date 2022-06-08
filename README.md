@@ -15,7 +15,7 @@ This is the Open-CE project for feedstock collection, environment data, and buil
 Welcome to the **open-ce** project. The project contains everything that is needed to build conda packages for
 a collection of machine learning and deep learning frameworks. All packages created for a specific version of
 Open-CE have been designed to be installed within a single conda environment. For more information on `conda`,
-please look at conda's official [documentation](https://docs.conda.io/).
+please look at conda's official [documentation](https://docs.conda.io/)
 
 This repository contains a collection of Open-CE files that can be used to create a conda channel. The conda channel
 will contain packages for every feedstock listed within the Open-CE files. Different variants of Python and CUDA can
