@@ -1,29 +1,29 @@
 builder_version: ">=10.0.1"
 
 imported_envs:
-  - common-deps.yaml
-  - openblas-env.yaml
-  - onnx-env.yaml
+#  - common-deps.yaml
+#  - openblas-env.yaml
+#  - onnx-env.yaml
   - pytorch-env.yaml                   # [build_type == 'cpu' or cudatoolkit == '11.8']
   - pytorch-extras-env.yaml            # [build_type == 'cpu' or cudatoolkit == '11.8']
   - pytorch_geometric-env.yaml         # [build_type == 'cpu' or cudatoolkit == '11.8']
   - tensorflow-env.yaml
-  - xgboost-env.yaml
-  - dali-env.yaml                      # [build_type == 'cpu' or cudatoolkit == '11.8']
-  - horovod-env.yaml                   # [build_type == 'cpu' or cudatoolkit == '11.8']
-  - lightgbm-env.yaml
-  - arrow-env.yaml
-  - mamba-env.yaml
+#  - xgboost-env.yaml
+#  - dali-env.yaml                      # [build_type == 'cpu' or cudatoolkit == '11.8']
+#  - horovod-env.yaml                   # [build_type == 'cpu' or cudatoolkit == '11.8']
+#  - lightgbm-env.yaml
+#  - arrow-env.yaml
+#  - mamba-env.yaml
 
 #  - ray-env.yaml
-  - apache-beam-env.yaml
+#  - apache-beam-env.yaml
 #  - prophet-env.yaml
-  - orbit-ml-env.yaml                  # [build_type == 'cpu' or cudatoolkit == '11.8']
-  - deepspeed-env.yaml                 # [build_type == 'cpu' or cudatoolkit == '11.8']
-  - misc-env.yaml
-  - or-tools-env.yaml
+#  - orbit-ml-env.yaml                  # [build_type == 'cpu' or cudatoolkit == '11.8']
+ # - deepspeed-env.yaml                 # [build_type == 'cpu' or cudatoolkit == '11.8']
+ # - misc-env.yaml
+ # - or-tools-env.yaml
   - tensorflow-serving-env.yaml
-  - transformers-env.yaml
+#  - transformers-env.yaml
 
   # On s390x, ffmpeg is not available in anaconda's main channel, hence we need to use our own ffmpeg for s390x
   - ffmpeg-env.yaml        #[s390x]
