@@ -12,7 +12,8 @@ packages:
   - feedstock : https://github.com/conda-forge/rust-feedstock.git
     git_tag : c94f3a87eef0c274fa3c8f6f8a6ce364caa30437
     patches:
-      - feedstock-patches/rust/0001-Fixed-build.patch
+     - feedstock-patches/rust/0001-Fixed-build.patch
+     - feedstock-patches/rust/0001-Add-fix-to-support-390x-platform.patch #[s390x]
   - feedstock : https://github.com/conda-forge/rust-activation-feedstock
     git_tag : 15daecc326884626192eecfe6279580edaad0855
     patches :
@@ -26,8 +27,12 @@ packages:
     git_tag : 1e5227b14f1c93caa9819f429e15b859cee36236                   #[not x86_64]
   - feedstock : https://github.com/conda-forge/transformers-feedstock
     git_tag : 053ca66df0d4963ad295b5e2f9f0d0a2f42c51b1
+    patches :
+      - feedstock-patches/transformers/0001-Bifurcated-transformers-into-v4.38-and-4.37.2.patch
   - feedstock : https://github.com/conda-forge/huggingface_hub-feedstock
     git_tag : 7ef40d11fe9b1d2af78b66ea04ea293b1cb21ab2
     patches :                                                                  #[ppc64le]
       - feedstock-patches/huggingface-hub/0001-Pinned-typing-extensions.patch  #[ppc64le]
+  - feedstock : https://github.com/conda-forge/typing_extensions-feedstock.git #[ppc64le]
+    git_tag : f853e30236c9c866bdc7cc8e4d1fbe766b182f37                         #[ppc64le]
 git_tag_for_env: open-ce-v1.11.4
