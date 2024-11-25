@@ -5,6 +5,7 @@ imported_envs:
   - openblas-env.yaml
 
 packages:
+{% if not s390x %}
 {% if build_type == 'cuda' %}
   - feedstock : cudatoolkit
   - feedstock : https://github.com/conda-forge/nvcc-feedstock
@@ -61,7 +62,8 @@ packages:
   - feedstock : https://github.com/conda-forge/rust-feedstock.git
     git_tag : c94f3a87eef0c274fa3c8f6f8a6ce364caa30437
     patches :
-      - feedstock-patches/rust/0001-Fixed-build.patch
+      - feedstock-patches/rust/0001-Fixed-build.patch #[not s390x]
+      - feedstock-patches/rust/0001-Add-fix-to-support-s390x-platform.patch #[s390x]
   - feedstock : https://github.com/conda-forge/rust-activation-feedstock
     git_tag : 15daecc326884626192eecfe6279580edaad0855
     patches :
@@ -74,4 +76,5 @@ packages:
     git_tag : ac3f03bf718b99e92676ee0cc17c04d1f4301c24
     patches:
       - feedstock-patches/python-multipart/0001-Changed-source-for-python-multipart.patch
+{% endif %}
 git_tag_for_env: open-ce-v1.11.4
